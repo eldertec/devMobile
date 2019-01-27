@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import br.com.eldertec.agenda.adapter.AlunosAdapter;
 import br.com.eldertec.agenda.dao.AlunoDAO;
 import br.com.eldertec.agenda.modelo.Aluno;
 
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         List<Aluno> alunos = dao.buscarAlunos();
         dao.close();
 
-        ArrayAdapter<Aluno> adapter = new ArrayAdapter<Aluno>(this, android.R.layout.simple_list_item_1, alunos);
+        AlunosAdapter adapter = new AlunosAdapter(this, alunos);
         lista.setAdapter(adapter);
     }
 

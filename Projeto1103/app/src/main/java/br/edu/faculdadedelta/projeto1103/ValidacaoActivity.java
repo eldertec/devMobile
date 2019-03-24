@@ -13,6 +13,7 @@ public class ValidacaoActivity extends AppCompatActivity {
     private String idade;
     private String dtNascimento;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

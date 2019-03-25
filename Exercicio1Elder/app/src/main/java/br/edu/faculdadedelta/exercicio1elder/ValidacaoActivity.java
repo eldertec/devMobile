@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ValidacaoActivity extends AppCompatActivity {
@@ -30,7 +32,7 @@ public class ValidacaoActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        if(intent != null){
+        if (intent != null) {
             tvNome = (TextView) findViewById(R.id.tvNome);
             tvDtNascimento = (TextView) findViewById(R.id.tvNascimento);
             tvPeso = (TextView) findViewById(R.id.tvPeso);
@@ -48,26 +50,40 @@ public class ValidacaoActivity extends AppCompatActivity {
         }
     }
 
-    public void validar(View view){
+    public void validar(View view) {
         String msgRetorno = "";
-        double pesoTemp = Double.parseDouble(peso);
-        Date dataTemp = new Date(dtNascimento);
-        Date hoje = new Date();
 
-        if(nome.equals("")){
+        if (nome.equals("")) {
             msgRetorno = "O nome é obrigatório!";
-        }else if(dtNascimento.equals("")){
-            msgRetorno += "\nA data de nascimento é obrigatória!";
-        }else if(peso.equals("")){
-            msgRetorno += "\nO peso é obrigatório!";
-        }else if(altura.equals("")){
-            msgRetorno += "\nA altura é obrigatória";
-        }else if(pesoTemp <= 60.4){
-            msgRetorno += "\nO peso deve ser maior que 60,4Kg";
-        }else if(nome.length() <= 30){
+        } else if (nome.length() <= 30) {
             msgRetorno += "\nO nome deve ter mais que 30 caracteres!";
-        }else if(dataTemp.before(hoje)){
-            msgRetorno += "\nA data de nascimento deve ser anterior a data atual!";
+        }
+        if (dtNascimento.equals("")) {
+            msgRetorno += "\nA data de nascimento é obrigatória!";
+        } else {
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            try {
+                Date dataTemp = sdf.parse(dtNascimento);
+                if (dataTemp.after(new Date())) {
+                    msgRetorno += "\nA data de nascimento deve ser anterior a data atual!";
+                }
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        if (peso.equals("")) {
+            msgRetorno += "\nO peso é obrigatório!";
+        } else {
+            double pesoTemp = Double.parseDouble(peso);
+            if (pesoTemp <= 60.4) {
+                msgRetorno += "\nO peso deve ser maior que 60,4Kg";
+            }
+        }
+        if (altura.equals("")) {
+            msgRetorno += "\nA altura é obrigatória";
+        }
+        if (msgRetorno.equals("")) {
+            msgRetorno = "Todos os dados são válidos";
         }
 
         Intent intent = new Intent();

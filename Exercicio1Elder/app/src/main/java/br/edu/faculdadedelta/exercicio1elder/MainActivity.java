@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, REQUEST_CODE);
     }
 
-    public void limpar(View... view) {
+    public void limparCampos(View view) {
         etNome.setText("");
         etDtNascimento.setText("");
         etPeso.setText("");
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 String msg = data.getStringExtra("msgRetorno");
 
                 Toast.makeText(getBaseContext(), msg, Toast.LENGTH_LONG).show();
-                limpar();
+
             }
         }
     }

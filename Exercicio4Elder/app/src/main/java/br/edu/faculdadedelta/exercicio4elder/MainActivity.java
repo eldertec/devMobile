@@ -1,4 +1,4 @@
-package br.edu.faculdadedelta.exercicio1elder;
+package br.edu.faculdadedelta.exercicio4elder;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
@@ -10,10 +10,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etNome;
-    private EditText etDtNascimento;
-    private EditText etPeso;
-    private EditText etAltura;
+    private EditText etProduto;
+    private EditText etValor;
+    private EditText etFornecedor;
+    private EditText etQuantidade;
 
     private final int REQUEST_CODE = 1;
 
@@ -22,30 +22,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etNome = (EditText) findViewById(R.id.formulario_nome);
-        etDtNascimento = (EditText) findViewById(R.id.formulario_dtNascimento);
-        etPeso = (EditText) findViewById(R.id.formulario_peso);
-        etAltura = (EditText) findViewById(R.id.formulario_altura);
-
-
+        etProduto = findViewById(R.id.formulario_produto);
+        etValor = findViewById(R.id.formulario_valor);
+        etFornecedor = findViewById(R.id.formulario_fornecedor);
+        etQuantidade = findViewById(R.id.formulario_quantidade);
     }
 
     public void enviar(View view) {
         Intent intent = new Intent(getBaseContext(), ValidacaoActivity.class);
 
-        intent.putExtra("nomeParam", etNome.getText().toString());
-        intent.putExtra("nascimentoParam", etDtNascimento.getText().toString());
-        intent.putExtra("pesoParam", etPeso.getText().toString());
-        intent.putExtra("alturaParam", etAltura.getText().toString());
+        intent.putExtra("produtoParam", etProduto.getText().toString());
+        intent.putExtra("valorParam", etValor.getText().toString());
+        intent.putExtra("fornecedorParam", etFornecedor.getText().toString());
+        intent.putExtra("quantidadeParam", etQuantidade.getText().toString());
 
         startActivityForResult(intent, REQUEST_CODE);
     }
 
-    public void limparCampos(View view) {
-        etNome.setText("");
-        etDtNascimento.setText("");
-        etPeso.setText("");
-        etAltura.setText("");
+    public void limpar(View view) {
+        etQuantidade.setText("");
+        etFornecedor.setText("");
+        etValor.setText("");
+        etProduto.setText("");
     }
 
     @Override
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE) {
             if (resultCode == ValidacaoActivity.RESULT_SUCESS) {
                 String msg = data.getStringExtra("msgRetorno");
-                limparCampos(null);
+                limpar(null);
                 Toast.makeText(getBaseContext(), msg, Toast.LENGTH_LONG).show();
 
             }

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Exercicio1ElderMD</string>
+    <string name="res_titulo">Exercício 1 Élder</string>
+    <string name="res_nome">Nome:</string>
+    <string name="res_dataNascimento">Data de Nascimento:</string>
+    <string name="res_peso">Peso:</string>
+    <string name="res_altura">Altura:</string>
+    <string name="res_btnEnviar">Enviar</string>
+    <string name="res_btnLimpar">Limpar</string>
+    <string name="res_btnValidar">Validar</string>
+
+</resources>

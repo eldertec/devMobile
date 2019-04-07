@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E0E0E0</color>
+    <color name="colorPrimaryDark">#909090</color>
+    <color name="colorAccent">#228B22</color>
+    <color name="colorBackgroundForm">#F8F8FF</color>
+    <color name="datePickerColor">#696969</color>
+    <color name="colorBtnLimpar">#FF0000</color>
+    <color name="colorBtnValidar">#6200EE</color>
+</resources>

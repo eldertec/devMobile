@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Material Project</string>
+    <string name="res_titulo">Material Design</string>
+    <string name="res_nome">Nome:</string>
+    <string name="res_dataNascimento">Data de Nascimento:</string>
+    <string name="res_peso">Peso:</string>
+    <string name="res_altura">Altura:</string>
+    <string name="res_btnEnviar">Enviar</string>
+    <string name="res_btnLimpar">Limpar</string>
+    <string name="res_btnValidar">Validar</string>
+    <string name="res_erroForm">O campo é obrigatório!</string>
+    <string name="res_erroAltura">\nMínimo 3 caracteres</string>
+</resources>

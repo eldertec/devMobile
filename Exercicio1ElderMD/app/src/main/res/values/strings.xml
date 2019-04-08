@@ -8,5 +8,6 @@
     <string name="res_btnEnviar">Enviar</string>
     <string name="res_btnLimpar">Limpar</string>
     <string name="res_btnValidar">Validar</string>
-
+    <string name="res_erroForm">O campo é obrigatório!</string>
+    <string name="res_erroAltura">\nMínimo 3 caracteres</string>
 </resources>

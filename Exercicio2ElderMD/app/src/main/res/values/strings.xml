@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Exercicio2ElderMD</string>
+    <string name="res_titulo">Exercício 2 Élder</string>
+    <string name="res_nome">Nome:</string>
+    <string name="res_valor">Valor:</string>
+    <string name="res_cor">Cor:</string>
+    <string name="res_modelo">Modelo:</string>
+    <string name="res_btnEnviar">Enviar</string>
+    <string name="res_btnLimpar">Limpar</string>
+    <string name="res_btnValidar">Validar</string>
+    <string name="res_erroForm">O campo é obrigatório!</string>
+</resources>

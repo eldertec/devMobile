@@ -19,7 +19,6 @@ public class ValidacaoActivity extends AppCompatActivity {
     private String quantidade;
 
     public static final int RESULT_SUCESS = 1;
-    public static final int RESULT_ERRO = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

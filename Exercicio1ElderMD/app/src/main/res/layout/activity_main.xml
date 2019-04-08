@@ -14,25 +14,29 @@
         android:clipToPadding="false"
         android:orientation="vertical"
         android:padding="24dp"
-        android:paddingTop="16dp">
+        android:paddingTop="16dp"
+        tools:ignore="MissingPrefix">
 
         <ImageView
             android:layout_width="140dp"
             android:layout_height="64dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="48dp"
-            android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/logodelta"
-            />
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/logodelta" />
 
         <TextView
+            fontPath=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/audiowide"
             android:text="@string/res_titulo"
             android:textAllCaps="true"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/hintNome"
@@ -60,9 +64,9 @@
                 android:id="@+id/formDtNascimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:focusable="false"
                 android:inputType="text"
-                android:maxLines="1"
-                android:focusable="false"/>
+                android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -92,7 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:maxLines="1"/>
+                android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
         <RelativeLayout
@@ -110,14 +114,14 @@
             <android.support.design.button.MaterialButton
                 android:id="@+id/btnlimpar"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:textColor="@color/colorBtnLimpar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
                 android:layout_marginRight="12dp"
                 android:layout_toStartOf="@id/btnEnviar"
                 android:layout_toLeftOf="@id/btnEnviar"
-                android:text="@string/res_btnLimpar" />
+                android:text="@string/res_btnLimpar"
+                android:textColor="@color/colorBtnLimpar" />
 
         </RelativeLayout>
 

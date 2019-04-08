@@ -53,8 +53,10 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE) {
             if (resultCode == ValidacaoActivity.RESULT_SUCESS) {
                 String msg = data.getStringExtra("msgRetorno");
-                limparCampos(null);
                 Toast.makeText(getBaseContext(), msg, Toast.LENGTH_LONG).show();
+                if(msg.equals("Todos os dados são válidos")){
+                    limparCampos(null);
+                }
 
             }
         }

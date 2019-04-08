@@ -23,7 +23,6 @@ public class ValidacaoActivity extends AppCompatActivity {
     private String altura;
 
     public static final int RESULT_SUCESS = 1;
-    public static final int RESULT_ERRO = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,16 +50,14 @@ public class ValidacaoActivity extends AppCompatActivity {
     }
 
     public void validar(View view) {
-        String msgRetorno = "";
+        String msgRetorno = validarCampos();
 
-        if (nome.equals("")) {
-            msgRetorno = "O nome é obrigatório!";
-        } else if (nome.length() <= 30) {
-            msgRetorno += "\nO nome deve ter mais que 30 caracteres!";
-        }
-        if (dtNascimento.equals("")) {
-            msgRetorno += "\nA data de nascimento é obrigatória!";
-        } else {
+        if (msgRetorno.equals("")) {
+
+            if (nome.length() <= 30) {
+                msgRetorno = "O nome deve ter mais que 30 caracteres!";
+            }
+
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             try {
                 Date dataTemp = sdf.parse(dtNascimento);
@@ -70,26 +67,47 @@ public class ValidacaoActivity extends AppCompatActivity {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-        }
-        if (peso.equals("")) {
-            msgRetorno += "\nO peso é obrigatório!";
-        } else {
+
             double pesoTemp = Double.parseDouble(peso);
             if (pesoTemp <= 60.4) {
                 msgRetorno += "\nO peso deve ser maior que 60,4Kg";
             }
+
+            if (msgRetorno.equals("")) {
+                msgRetorno = "Todos os dados são válidos";
+            }
+
+            Intent intent = new Intent();
+            intent.putExtra("msgRetorno", msgRetorno);
+
+            setResult(RESULT_SUCESS, intent);
+            finish();
+        }else{
+            Intent intent = new Intent();
+            intent.putExtra("msgRetorno", msgRetorno);
+
+            setResult(RESULT_SUCESS, intent);
+            finish();
+        }
+
+    }
+
+    private String validarCampos() {
+        String msgRetorno = "";
+
+        if (nome.equals("")) {
+            msgRetorno = "O nome é obrigatório!";
+        }
+        if (dtNascimento.equals("")) {
+            msgRetorno += "\nA data de nascimento é obrigatória!";
+        }
+        if (peso.equals("")) {
+            msgRetorno += "\nO peso é obrigatório!";
         }
         if (altura.equals("")) {
             msgRetorno += "\nA altura é obrigatória";
         }
-        if (msgRetorno.equals("")) {
-            msgRetorno = "Todos os dados são válidos";
-        }
 
-        Intent intent = new Intent();
-        intent.putExtra("msgRetorno", msgRetorno);
-
-        setResult(RESULT_SUCESS, intent);
-        finish();
+        return msgRetorno;
     }
 }

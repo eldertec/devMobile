@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Exercicio3ElderMD</string>
+    <string name="res_titulo">Exercício 3 Élder</string>
+    <string name="res_produto">Produto:</string>
+    <string name="res_valor">Valor:</string>
+    <string name="res_cliente">Cliente:</string>
+    <string name="res_datavenda">Data da Venda:</string>
+    <string name="res_btnEnviar">Enviar</string>
+    <string name="res_btnLimpar">Limpar</string>
+    <string name="res_btnValidar">Validar</string>
+    <string name="res_erroForm">O campo é obrigatório!</string>
+    <string name="res_erroProduto">\nMínimo 11 caracteres</string>
+</resources>

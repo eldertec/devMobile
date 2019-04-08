@@ -82,9 +82,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void limparCampos() {
         etNome.setText("");
+        tlNome.setError(null);
         etValor.setText("");
+        tlValor.setError(null);
         etCor.setText("");
+        tlCor.setError(null);
         etModelo.setText("");
+        tlModelo.setError(null);
     }
 
     private boolean validador() {
@@ -118,19 +122,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isNomeValid(@Nullable Editable text) {
-        return text != null && text.length() > 1;
+        return text != null && text.length() > 0;
     }
 
     private boolean isValorValid(@Nullable Editable text) {
-        return text != null && text.length() > 1;
+        return text != null && text.length() > 0;
     }
 
     private boolean isCorValid(@Nullable Editable text) {
-        return text != null && text.length() > 1;
+        return text != null && text.length() > 0;
     }
 
     private boolean isModeloValid(@Nullable Editable text) {
-        return text != null && text.length() > 1;
+        return text != null && text.length() > 0;
     }
 
     @Override

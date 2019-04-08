@@ -109,9 +109,13 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
     private void limparCampos() {
         nome.setText("");
+        tlNome.setError(null);
         peso.setText("");
+        tlPeso.setError(null);
         altura.setText("");
+        tlAltura.setError(null);
         dtNascimento.setText("");
+        tlDtNascimento.setError(null);
     }
 
     @Override

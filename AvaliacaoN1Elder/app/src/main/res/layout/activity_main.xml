@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/formulario_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cliente"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/formulario_dtNascimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de Nascimento"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/formulario_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CPF"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/formulario_servico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Servico"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/formulario_quantidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantidade"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/formulario_valor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/formulario_dtInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de Inicio"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/formulario_dtFim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de Fim"
+            android:inputType="date" />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar" />
+
+        <Button
+            android:id="@+id/btnLimpar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Limpar" />
+
+    </LinearLayout>
+
+</ScrollView>

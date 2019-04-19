@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrincipalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrição"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etEspecificacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Especificação"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etDepartamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Departamento"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etQuantidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantidade"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar" />
+
+        <Button
+            android:id="@+id/btnLimpar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Limpar" />
+
+        <Button
+            android:id="@+id/btnListar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listar" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrincipalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/logo"
+            />
+
+        <EditText
+            android:id="@+id/etTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titulo"
+            android:inputType="text"
+            style="@style/EditTextStyle"/>
+
+        <EditText
+            android:id="@+id/etGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Genero"
+            android:inputType="text"
+            style="@style/EditTextStyle"/>
+
+        <EditText
+            android:id="@+id/etTemporada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Temporada"
+            android:inputType="number"
+            style="@style/EditTextStyle"/>
+
+        <EditText
+            android:id="@+id/etNota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nota"
+            android:inputType="number"
+            style="@style/EditTextStyle"/>
+
+        <EditText
+            android:id="@+id/etAnoLancamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ano de Lançamento"
+            android:inputType="number"
+            style="@style/EditTextStyle"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnSalvar"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="7dp"
+                android:backgroundTint="#008000"
+                android:text="Salvar" />
+
+            <Button
+                android:id="@+id/btnLimpar"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@id/btnListar"
+                android:layout_toLeftOf="@id/btnListar"
+                android:textColor="#FF0000"
+                android:text="Limpar" />
+
+            <Button
+                android:id="@+id/btnListar"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@id/btnSalvar"
+                android:layout_toLeftOf="@id/btnSalvar"
+                android:backgroundTint="#0000FF"
+                android:text="Listar" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

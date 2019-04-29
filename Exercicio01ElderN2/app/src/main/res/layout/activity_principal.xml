@@ -9,60 +9,99 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:layout_width="268dp"
+            android:layout_height="136dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/logotipo"
+            />
 
         <EditText
             android:id="@+id/etDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Descrição"
-            android:inputType="text" />
+            android:inputType="text"
+            style="@style/EditTextStyle"/>
 
         <EditText
             android:id="@+id/etEspecificacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Especificação"
-            android:inputType="text" />
+            android:inputType="text"
+            style="@style/EditTextStyle"/>
 
         <EditText
             android:id="@+id/etDepartamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Departamento"
-            android:inputType="text" />
+            android:inputType="text"
+            style="@style/EditTextStyle"/>
 
         <EditText
             android:id="@+id/etValor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Valor"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            style="@style/EditTextStyle"/>
 
         <EditText
             android:id="@+id/etQuantidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Quantidade"
-            android:inputType="number" />
+            android:inputType="number"
+            style="@style/EditTextStyle"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
 
         <Button
             android:id="@+id/btnSalvar"
-            android:layout_width="match_parent"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            android:backgroundTint="#008000"
             android:text="Salvar" />
 
         <Button
             android:id="@+id/btnLimpar"
-            android:layout_width="match_parent"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@id/btnListar"
+            android:layout_toLeftOf="@id/btnListar"
+            android:textColor="#FF0000"
             android:text="Limpar" />
 
         <Button
             android:id="@+id/btnListar"
-            android:layout_width="match_parent"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@id/btnSalvar"
+            android:layout_toLeftOf="@id/btnSalvar"
+            android:backgroundTint="#0000FF"
             android:text="Listar" />
+        </RelativeLayout>
+
     </LinearLayout>
 
 </ScrollView>

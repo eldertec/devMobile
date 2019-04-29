@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="btnSalvar" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="android:backgroundTint"></item>
+    </style>
+</resources>

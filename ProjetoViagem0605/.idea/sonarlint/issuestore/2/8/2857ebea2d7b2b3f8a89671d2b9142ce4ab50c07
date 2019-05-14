@@ -1,0 +1,5 @@
+
+{squid:S1450"XRemove the "btnLimpar" field and declare it as a local variable in the relevant methods.(ş »µüÿÿÿÿ8æÀ”ö¨-
+{squid:S1450"XRemove the "btnListar" field and declare it as a local variable in the relevant methods.(£íÀ›úÿÿÿÿ8çŠö¨-
+{squid:S1450"XRemove the "btnSalvar" field and declare it as a local variable in the relevant methods.(£‚ÿÿÿÿÿ8²ášö¨-
+Xsquid:UselessImportCheck"-Remove this unused import 'java.time.Period'.(šÉ¢½8¹¯¶ø¨-

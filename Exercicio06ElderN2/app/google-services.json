@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "367242801098",
+    "firebase_url": "https://local-scope-226215.firebaseio.com",
+    "project_id": "local-scope-226215",
+    "storage_bucket": "local-scope-226215.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367242801098:android:d869fb6ef5a3ad41",
+        "android_client_info": {
+          "package_name": "br.edu.faculdadedelta.exercicio06eldern2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367242801098-kflmoct26e4udlpq63dquvt3tr7qgdt5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.edu.faculdadedelta.exercicio06eldern2",
+            "certificate_hash": "97270b5f3d82e22edd13f0aed85e8cb2d40b0d02"
+          }
+        },
+        {
+          "client_id": "367242801098-8r8mh0tnqce8lr4mn8003qcr23nqkldb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxMBCbe5juZhp_hppTAlsK-M1I4T3Bnn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367242801098-8r8mh0tnqce8lr4mn8003qcr23nqkldb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

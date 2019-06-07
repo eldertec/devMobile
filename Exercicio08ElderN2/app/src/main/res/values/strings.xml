@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Igp Manager</string>
+    <string name="res_titulo">Exercício 8 Élder</string>
+    <string name="res_numero">Número:</string>
+    <string name="res_assunto">Assunto:</string>
+    <string name="res_valor">Valor:</string>
+    <string name="res_dtAutuacao">Data de Autuação:</string>
+    <string name="res_btnSalvar">Salvar</string>
+    <string name="res_btnLimpar">Limpar</string>
+    <string name="res_btnListar">Listar</string>
+    <string name="res_erroForm">O campo é obrigatório!</string>
+</resources>

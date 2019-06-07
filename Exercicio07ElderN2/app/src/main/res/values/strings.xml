@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Exercicio07ElderN2</string>
+    <string name="app_name">Drivers Manager</string>
     <string name="res_titulo">Gestão de Motoristas</string>
     <string name="res_nome">Nome</string>
     <string name="res_cpf">CPF</string>

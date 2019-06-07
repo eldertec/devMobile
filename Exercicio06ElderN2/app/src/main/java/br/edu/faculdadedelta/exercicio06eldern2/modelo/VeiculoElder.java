@@ -6,7 +6,7 @@ import java.util.Date;
 public class VeiculoElder implements Serializable {
 
     private Long id;
-    private String Placa;
+    private String placa;
     private String marca;
     private String modelo;
     private Date dataFabricacao;
@@ -16,7 +16,7 @@ public class VeiculoElder implements Serializable {
 
     public VeiculoElder(Long id, String placa, String marca, String modelo, Date dataFabricacao) {
         this.id = id;
-        Placa = placa;
+        this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
         this.dataFabricacao = dataFabricacao;
@@ -31,11 +31,11 @@ public class VeiculoElder implements Serializable {
     }
 
     public String getPlaca() {
-        return Placa;
+        return placa;
     }
 
     public void setPlaca(String placa) {
-        Placa = placa;
+        this.placa = placa;
     }
 
     public String getMarca() {

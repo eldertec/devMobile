@@ -28,11 +28,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="15dp"
+            android:fontFamily="@font/black_ops_one"
             android:text="@string/res_titulo"
             android:textAllCaps="true"
+            android:textColor="#429B9B"
             android:textSize="16sp"
             android:typeface="normal"
-            android:textColor="#429B9B"
             app:fontFamily="@font/black_ops_one" />
 
         <android.support.design.widget.TextInputLayout
@@ -47,7 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:maxLines="1" />
+                android:maxLines="1"
+                />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout

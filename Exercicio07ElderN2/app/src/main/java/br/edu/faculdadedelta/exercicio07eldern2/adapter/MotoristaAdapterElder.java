@@ -1,6 +1,7 @@
 package br.edu.faculdadedelta.exercicio07eldern2.adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -39,11 +40,16 @@ public class MotoristaAdapterElder extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = convertView.inflate(context, R.layout.layout_item_lista, null);
+        LayoutInflater inflater = LayoutInflater.from(context);
+
+        View view = convertView;
+        if(view == null){
+            view = inflater.inflate(R.layout.layout_item_lista, parent, false);
+        }
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-        MotoristaElder motorista = (MotoristaElder) getItem(position);
+        MotoristaElder motorista = listaMotoristas.get(position);
 
         TextView tvId = (TextView) view.findViewById(R.id.tvId);
         tvId.setText(String.valueOf(motorista.getId()));

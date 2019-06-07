@@ -2,9 +2,11 @@ package br.edu.faculdadedelta.exercicio07eldern2;
 
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.text.TextUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import br.edu.faculdadedelta.exercicio07eldern2.modelo.MotoristaElder;
 
@@ -48,7 +50,7 @@ public class FormularioHelper {
         motorista = new MotoristaElder();
     }
 
-    public MotoristaElder popularModelo(){
+    public MotoristaElder popularModelo() {
         motorista.setNome(etNome.getText().toString());
         motorista.setCpf(etCpf.getText().toString());
         motorista.setCnh(etCnh.getText().toString());
@@ -60,7 +62,7 @@ public class FormularioHelper {
         return motorista;
     }
 
-    public void popularFormulario(MotoristaElder motorista){
+    public void popularFormulario(MotoristaElder motorista) {
         etNome.setText(motorista.getNome());
         etCpf.setText(motorista.getCpf());
         etCnh.setText(motorista.getCnh());
@@ -68,5 +70,33 @@ public class FormularioHelper {
         this.motorista = motorista;
     }
 
-    
+    public String validarCampos() {
+        String msgRetorno = "";
+
+        if (TextUtils.isEmpty(etNome.getText().toString())) {
+            msgRetorno = "O Nome é obrigatório";
+        }
+        if (TextUtils.isEmpty(etCpf.getText().toString())) {
+            msgRetorno += "\nO CPF é obrigatório";
+        }
+        if (TextUtils.isEmpty(etCnh.getText().toString())) {
+            msgRetorno += "\nO CNH é obrigatório";
+        }
+        if (TextUtils.isEmpty(etDtNascimento.getText().toString())) {
+            msgRetorno += "\nA Data de Nascimento é obrigatória";
+        } else {
+            try {
+                Date dataMin = sdf.parse("02/01/1900");
+                Date dataConvertida = sdf.parse(etDtNascimento.getText().toString());
+                if (dataConvertida.before(dataMin) || dataConvertida.after(new Date())) {
+                    msgRetorno += "\nA Data de Nascimento deve ser posterior a 01/01/1900 e anterior a data atual";
+                }
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return msgRetorno;
+    }
 }

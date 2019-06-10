@@ -43,22 +43,22 @@ public class BemAdapterElder extends BaseAdapter {
         BemElder bem = (BemElder) getItem(position);
 
         TextView tvId = (TextView) view.findViewById(R.id.tvId);
-        tvId.setText("Id: ".concat(String.valueOf(bem.getId())));
+        tvId.setText(String.valueOf(bem.getId()));
 
         TextView tvDescricao = (TextView) view.findViewById(R.id.tvDescricao);
-        tvDescricao.setText("Descrição: ".concat(bem.getDescricao()));
+        tvDescricao.setText(String.format("Descrição: %s",bem.getDescricao()));
 
         TextView tvEspecificacao = (TextView) view.findViewById(R.id.tvEspecificacao);
-        tvEspecificacao.setText("Especificação: ".concat(bem.getEspecificacao()));
+        tvEspecificacao.setText(String.format("Especificação: %s",bem.getEspecificacao()));
 
         TextView tvDepartamento = (TextView) view.findViewById(R.id.tvDepartamento);
-        tvDepartamento.setText("Departamento: ".concat(bem.getDepartamento()));
+        tvDepartamento.setText(String.format("Departamento: %s",bem.getDepartamento()));
 
         TextView tvValor = (TextView) view.findViewById(R.id.tvValor);
-        tvValor.setText("Valor: ".concat(String.valueOf(bem.getValor())));
+        tvValor.setText(String.format("Valor: %s",bem.getValor()));
 
         TextView tvQuantidade = (TextView) view.findViewById(R.id.tvQuantidade);
-        tvQuantidade.setText("Quantidade: ".concat(String.valueOf(bem.getQuantidade())));
+        tvQuantidade.setText(String.format("Quantidade: %s",bem.getQuantidade()));
 
         return view;
     }

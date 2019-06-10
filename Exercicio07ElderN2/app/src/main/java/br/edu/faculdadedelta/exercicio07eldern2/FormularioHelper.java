@@ -74,22 +74,29 @@ public class FormularioHelper {
         String msgRetorno = "";
 
         if (TextUtils.isEmpty(etNome.getText().toString())) {
+            ilNome.setError(" ");
             msgRetorno = "O Nome é obrigatório";
         }
         if (TextUtils.isEmpty(etCpf.getText().toString())) {
+            ilCpf.setError(" ");
             msgRetorno += "\nO CPF é obrigatório";
         }
         if (TextUtils.isEmpty(etCnh.getText().toString())) {
+            ilCnh.setError(" ");
             msgRetorno += "\nO CNH é obrigatório";
         }
         if (TextUtils.isEmpty(etDtNascimento.getText().toString())) {
+            ilDtNascimento.setError(" ");
             msgRetorno += "\nA Data de Nascimento é obrigatória";
         } else {
             try {
                 Date dataMin = sdf.parse("02/01/1900");
                 Date dataConvertida = sdf.parse(etDtNascimento.getText().toString());
-                if (dataConvertida.before(dataMin) || dataConvertida.after(new Date())) {
-                    msgRetorno += "\nA Data de Nascimento deve ser posterior a 01/01/1900 e anterior a data atual";
+                Date agora = new Date();
+                if (dataConvertida.before(dataMin) || dataConvertida.after(agora)) {
+                    ilDtNascimento.setError(" ");
+                    msgRetorno += String.format("\nA Data de Nascimento deve ser de %s a %s!", sdf.format(dataMin) ,sdf.format(agora));
+
                 }
             } catch (ParseException e) {
                 e.printStackTrace();

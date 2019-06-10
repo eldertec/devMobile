@@ -63,8 +63,8 @@ public class PrincipalHelper {
             msgRetorno += "\nO Valor é obrigatório!";
         } else {
             double valor = Double.parseDouble(etValor.getText().toString());
-            if (valor <= 100) {
-                msgRetorno += "\nO Valor deve ser maior que 100!";
+            if (valor <= 0) {
+                msgRetorno += "\nO Valor deve ser maior que 0!";
             }
         }
         if (etQuantidade.getText().toString().equals("")) {

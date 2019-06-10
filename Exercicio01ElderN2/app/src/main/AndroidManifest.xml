@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ListaActivity"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
-            android:parentActivityName=".PrincipalActivity"></activity>
+            android:theme="@style/Theme.AppCompat.Light"
+            android:parentActivityName=".PrincipalActivity"
+            android:label="Patrimonio"></activity>
         <activity android:name=".PrincipalActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

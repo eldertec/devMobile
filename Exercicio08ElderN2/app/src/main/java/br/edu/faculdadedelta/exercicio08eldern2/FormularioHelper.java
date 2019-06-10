@@ -76,15 +76,19 @@ public class FormularioHelper {
         String msgRetorno = "";
 
         if(TextUtils.isEmpty(etNumero.getText().toString())){
+            ilNumero.setError(" ");
             msgRetorno = "O Número é obrigatório!";
         }
         if(TextUtils.isEmpty(etAssunto.getText().toString())){
+            ilAssunto.setError(" ");
             msgRetorno += "\nO Assunto é obrigatório!";
         }
         if(TextUtils.isEmpty(etValor.getText().toString())){
+            ilValor.setError(" ");
             msgRetorno += "\nO Valor é obrigatório!";
         }
         if(TextUtils.isEmpty(etDtAutuacao.getText().toString())){
+            ilDtAutuacao.setError(" ");
             msgRetorno += "\nA Data de Autuação é obrigatória!";
         }else{
             try {
@@ -92,6 +96,7 @@ public class FormularioHelper {
                 Date dataConvertida = sdf.parse(etDtAutuacao.getText().toString());
                 Date agora = new Date();
                 if(dataConvertida.before(dataMin) || dataConvertida.after(agora)){
+                    ilDtAutuacao.setError(" ");
                     msgRetorno += String.format("\nA Data de Autuação deve ser de %s a %s!", sdf.format(dataMin) ,sdf.format(agora));
                 }
             } catch (ParseException e) {

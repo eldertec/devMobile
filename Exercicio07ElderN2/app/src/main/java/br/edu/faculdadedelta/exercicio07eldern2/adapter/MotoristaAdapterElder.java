@@ -55,16 +55,16 @@ public class MotoristaAdapterElder extends BaseAdapter {
         tvId.setText(String.valueOf(motorista.getId()));
 
         TextView tvNome = (TextView) view.findViewById(R.id.tvNome);
-        tvNome.setText("Nome: ".concat(motorista.getNome()));
+        tvNome.setText(String.format("Nome: %s",motorista.getNome()));
 
         TextView tvCpf = (TextView) view.findViewById(R.id.tvCpf);
-        tvCpf.setText("CPF: ".concat(motorista.getCpf()));
+        tvCpf.setText(String.format("CPF: %s",motorista.getCpf()));
 
         TextView tvCnh = (TextView) view.findViewById(R.id.tvCnh);
-        tvCnh.setText("CNH: ".concat(motorista.getCnh()));
+        tvCnh.setText(String.format("CNH: %s",motorista.getCnh()));
 
         TextView tvDtnascimento = (TextView) view.findViewById(R.id.tvDtNascimento);
-        tvDtnascimento.setText("Data de nascimento: ".concat(sdf.format(motorista.getDataNascimento())));
+        tvDtnascimento.setText(String.format("Data de nascimento: %s",sdf.format(motorista.getDataNascimento())));
 
         return view;
     }

@@ -47,7 +47,7 @@ public class PrincipalHelper {
         String msgRetorno = "";
 
         if (etProduto.getText().toString().equals("")) {
-            msgRetorno += "\nO Produto é obrigatório!";
+            msgRetorno = "O Produto é obrigatório!";
         }
         if (etFornecedor.getText().toString().equals("")) {
             msgRetorno += "\nO Fornecedor é obrigatório!";

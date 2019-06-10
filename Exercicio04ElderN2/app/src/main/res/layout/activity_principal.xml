@@ -1,48 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".PrincipalActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/logo_04"
+        />
+
     <EditText
         android:id="@+id/etNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nome"
-        android:inputType="text" />
+        android:inputType="text"
+        style="@style/EditTextStyle"/>
 
     <EditText
         android:id="@+id/etEditora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Editora"
-        android:inputType="text" />
+        android:inputType="text"
+        style="@style/EditTextStyle"/>
 
     <EditText
         android:id="@+id/etValor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Valor"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        style="@style/EditTextStyle"/>
 
-    <Button
-        android:id="@+id/btnSalvar"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Salvar" />
+        android:layout_marginTop="20dp">
 
-    <Button
-        android:id="@+id/btnLimpar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Limpar" />
+        <Button
+            android:id="@+id/btnSalvar"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            android:backgroundTint="#0081C6"
+            android:text="Salvar" />
 
-    <Button
-        android:id="@+id/btnListar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Listar" />
+        <Button
+            android:id="@+id/btnLimpar"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@id/btnListar"
+            android:layout_toLeftOf="@id/btnListar"
+            android:textColor="#FF0000"
+            android:text="Limpar" />
+
+        <Button
+            android:id="@+id/btnListar"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@id/btnSalvar"
+            android:layout_toLeftOf="@id/btnSalvar"
+            android:backgroundTint="#F1B434"
+            android:text="Listar" />
+    </RelativeLayout>
+
 
 </LinearLayout>

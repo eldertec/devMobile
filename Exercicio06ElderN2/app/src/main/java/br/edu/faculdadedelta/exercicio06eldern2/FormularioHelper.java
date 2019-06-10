@@ -76,15 +76,19 @@ public class FormularioHelper {
         String msgRetorno = "";
 
         if(TextUtils.isEmpty(etPlaca.getText().toString())){
+            ilPlaca.setError(" ");
             msgRetorno = "A Placa é obrigatória!";
         }
         if(TextUtils.isEmpty(etModelo.getText().toString())){
+            ilModelo.setError(" ");
             msgRetorno += "\nO Modelo é obrigatório!";
         }
         if(TextUtils.isEmpty(etMarca.getText().toString())){
+            ilMarca.setError(" ");
             msgRetorno += "\nA Marca é obrigatória!";
         }
         if(TextUtils.isEmpty(etDtFabricacao.getText().toString())){
+            ilDtFabricacao.setError(" ");
             msgRetorno += "\nA Data de Fabricação é obrigatória!";
         }else{
             try {
@@ -92,7 +96,8 @@ public class FormularioHelper {
                 Date dataConvertida = sdf.parse(etDtFabricacao.getText().toString());
                 Date agora = new Date();
                 if(dataConvertida.before(dataMin) || dataConvertida.after(agora)){
-                    msgRetorno += String.format("\nA Data de Fabricação deve ser posterior a %s e anterior a %s!", sdf.format(dataMin) ,sdf.format(agora));
+                    ilDtFabricacao.setError(" ");
+                    msgRetorno += String.format("\nA Data de Fabricação deve de %s a %s!", sdf.format(dataMin) ,sdf.format(agora));
                 }
             } catch (ParseException e) {
                 e.printStackTrace();

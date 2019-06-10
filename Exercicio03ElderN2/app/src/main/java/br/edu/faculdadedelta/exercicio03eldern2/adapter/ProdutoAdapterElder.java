@@ -43,16 +43,16 @@ public class ProdutoAdapterElder extends BaseAdapter {
         ProdutoElder produto = (ProdutoElder) getItem(position);
 
         TextView tvId = (TextView) view.findViewById(R.id.tvId);
-        tvId.setText("Id: ".concat(String.valueOf(produto.getId())));
+        tvId.setText(String.valueOf(produto.getId()));
 
         TextView tvProduto = (TextView) view.findViewById(R.id.tvProduto);
-        tvProduto.setText("Produto: ".concat(produto.getProduto()));
+        tvProduto.setText(String.format("Produto: %s",produto.getProduto()));
 
         TextView tvFornecedor = (TextView) view.findViewById(R.id.tvFornecedor);
-        tvFornecedor.setText("Fornecedor: ".concat(produto.getFornecedor()));
+        tvFornecedor.setText(String.format("Fornecedor: %s",produto.getFornecedor()));
 
         TextView tvValor = (TextView) view.findViewById(R.id.tvValor);
-        tvValor.setText("Valor: ".concat(String.valueOf(produto.getValor())));
+        tvValor.setText(String.format("Valor: %s",produto.getValor()));
 
         return view;
     }

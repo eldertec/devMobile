@@ -43,19 +43,19 @@ public class VendaAdapterElder extends BaseAdapter {
         VendaElder venda = (VendaElder) getItem(position);
 
         TextView tvId = (TextView) view.findViewById(R.id.tvId);
-        tvId.setText("Id: ".concat(String.valueOf(venda.getId())));
+        tvId.setText(String.valueOf(venda.getId()));
 
         TextView tvCliente = (TextView) view.findViewById(R.id.tvCliente);
-        tvCliente.setText("Cliente: ".concat(venda.getCliente()));
+        tvCliente.setText(String.format("Cliente: %s",venda.getCliente()));
 
         TextView tvProduto = (TextView) view.findViewById(R.id.tvProduto);
-        tvProduto.setText("Produto: ".concat(venda.getProduto()));
+        tvProduto.setText(String.format("Produto: %s",venda.getProduto()));
 
         TextView tvValor = (TextView) view.findViewById(R.id.tvValor);
-        tvValor.setText("Valor: ".concat(String.valueOf(venda.getValor())));
+        tvValor.setText(String.format("Valor: %s",venda.getValor()));
 
         TextView tvQuantidade = (TextView) view.findViewById(R.id.tvQuantidade);
-        tvQuantidade.setText("Quantidade: ".concat(String.valueOf(venda.getQuantidade())));
+        tvQuantidade.setText(String.format("Quantidade: %s",venda.getQuantidade()));
 
         return view;
     }

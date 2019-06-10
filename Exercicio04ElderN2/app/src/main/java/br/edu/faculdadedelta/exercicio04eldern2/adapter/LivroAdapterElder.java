@@ -43,16 +43,16 @@ public class LivroAdapterElder extends BaseAdapter {
         LivroElder livro = (LivroElder) getItem(position);
 
         TextView tvId = (TextView) view.findViewById(R.id.tvId);
-        tvId.setText("Id: ".concat(String.valueOf(livro.getId())));
+        tvId.setText(String.valueOf(livro.getId()));
 
         TextView tvNome = (TextView) view.findViewById(R.id.tvNome);
-        tvNome.setText("Nome: ".concat(livro.getNome()));
+        tvNome.setText(String.format("Nome: %s",livro.getNome()));
 
         TextView tvEditora = (TextView) view.findViewById(R.id.tvEditora);
-        tvEditora.setText("Editora: ".concat(livro.getEditora()));
+        tvEditora.setText(String.format("Editora: %s",livro.getEditora()));
 
         TextView tvValor = (TextView) view.findViewById(R.id.tvValor);
-        tvValor.setText("Valor: ".concat(String.valueOf(livro.getValor())));
+        tvValor.setText(String.format("Valor: %s",livro.getValor()));
 
         return view;
     }

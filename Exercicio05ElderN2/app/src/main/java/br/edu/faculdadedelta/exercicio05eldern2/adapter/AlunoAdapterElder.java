@@ -47,17 +47,17 @@ public class AlunoAdapterElder extends BaseAdapter {
         tvId.setText(String.valueOf(aluno.getId()));
 
         TextView tvNome = (TextView) view.findViewById(R.id.tvNome);
-        tvNome.setText("Nome: ".concat(aluno.getNome()));
+        tvNome.setText(String.format("Nome: %s",aluno.getNome()));
 
         TextView tvIdade = (TextView) view.findViewById(R.id.tvIdade);
-        tvIdade.setText("Idade: ".concat(String.valueOf(aluno.getIdade())));
+        tvIdade.setText(String.format("Idade: %s",aluno.getIdade()));
 
         TextView tvDtNascimento = (TextView) view.findViewById(R.id.tvDtNascimento);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        tvDtNascimento.setText("Data de Nascimento: ".concat(sdf.format(aluno.getDataNascimento())));
+        tvDtNascimento.setText(String.format("Data de Nascimento: %s",sdf.format(aluno.getDataNascimento())));
 
         TextView tvInstrucao = (TextView) view.findViewById(R.id.tvInstrucao);
-        tvInstrucao.setText("Grau de Instrução: ".concat(aluno.getInstrucao()));
+        tvInstrucao.setText(String.format("Grau de Instrução: %s",aluno.getInstrucao()));
 
         return view;
     }
